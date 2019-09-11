@@ -198,7 +198,11 @@ def update_fig(A, rects, i):
 
     i[0] += 1
     noOfOperations.set_text("No. of operations:"+str(i[0]))
-    timeTaken.set_text("Time taken:"+str(time.time()-start_time)[:4]+"sec")
+    # timeTaken.set_text("Time taken:"+str(time.time()-start_time)[:4]+"sec")
+    time_elapsed=(time.time()-start_time)
+    time_elapsed=float("{0:.2f}".format(time_elapsed))
+    time_elapsed=str(time_elapsed)
+    timeTaken.set_text("Time taken:"+time_elapsed+" sec")
 
 
 ####################################################
